@@ -1,3 +1,10 @@
+[gpg]
+    format = ssh
 [user]
-	email = joe-lawler-23@jobot-services.com
-	name = joseph lawler
+    signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIInWY3jODxFoHUuZG7SEKVC7DpSoNsXiYySaFCTjAxAd"
+    email = github@jfl.services
+	name = jobot2397
+[commit]
+    gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /Users/jobot23/.ssh/allowedSigners

@@ -5,24 +5,30 @@
 ### Linux and macOS
 Create a symlink to use the dotfiles vim configuration:
 
+Backup existing .vimrc if it exists:
 ```bash
-# Backup existing .vimrc if it exists
 mv ~/.vimrc ~/.vimrc.backup 2>/dev/null || true
+```
 
-# Create symlink (source) -> (target)
+Create symlink:
+```bash
 ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
 ## Verify Setup
 
+Check if the symlink was created correctly:
 ```bash
-# Check if the symlink was created correctly
 ls -la ~/.vimrc
+```
 
-# Verify the symlink points to your dotfiles
+Verify the symlink points to your dotfiles:
+```bash
 readlink ~/.vimrc
+```
 
-# Test vim configuration (optional)
+Test vim configuration (optional):
+```bash
 vim --version
 ```
 
