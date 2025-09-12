@@ -1,0 +1,6 @@
+# Git allowed signers for commit verification
+# Format: email key-type public-key
+# Example:
+# your.email@example.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExample...
+
+ github@jfl.services ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIInWY3jODxFoHUuZG7SEKVC7DpSoNsXiYySaFCTjAxAd

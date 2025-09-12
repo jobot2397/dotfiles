@@ -20,6 +20,11 @@ Create symlink:
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ```
 
+Link allowed_signers for Git commit verification:
+```bash
+ln -sf ~/dotfiles/ssh/allowed_signers ~/.ssh/allowed_signers
+```
+
 Set proper permissions:
 ```bash
 chmod 700 ~/.ssh
@@ -48,8 +53,14 @@ ssh -T git@github.com 2>/dev/null || echo "SSH config loaded successfully"
 
 The symlink should show: `~/.ssh/config -> /Users/<user>/dotfiles/ssh/config` (macOS) or `/home/<user>/dotfiles/ssh/config` (Linux)
 
+## Configuration Files
+
+- `config` - SSH client configuration
+- `allowed_signers` - Git commit signing verification (safe to include public keys)
+- `*.pub` - SSH public keys (safe to include)
+
 ## Security Note
 
 - SSH private keys should NEVER be stored in the dotfiles repository
-- Only store the SSH config file, not private keys
-- Keep SSH keys in `~/.ssh/` with proper permissions (600 for keys, 644 for public keys)
+- Only store the SSH config file and public keys, not private keys
+- Keep SSH private keys in `~/.ssh/` with proper permissions (600 for private keys, 644 for public keys)
