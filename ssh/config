@@ -1,0 +1,9 @@
+# SSH configuration file
+# Add your SSH host configurations here
+
+# Example:
+# Host example
+#     HostName example.com
+#     User username
+#     Port 22
+#     IdentityFile ~/.ssh/id_rsa
