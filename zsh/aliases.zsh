@@ -16,6 +16,3 @@ alias c='clear'
 # Zsh
 alias reload="source ~/.zshrc"
 alias zedit="zed ~/dotfiles/zsh/.zshrc"
-
-# Cat (Requires bat)
-alias cat="bat"

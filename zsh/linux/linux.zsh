@@ -1,6 +1,7 @@
 # Linux-specific zsh configuration
 
-# Bitwarden SSH agent socket
-export SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
+# Cat (Requires bat)
+alias cat="batcat"
+alias bat="batcat"
 
 # Add any other Linux-specific configurations here
