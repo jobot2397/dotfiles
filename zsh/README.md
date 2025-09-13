@@ -7,6 +7,7 @@ This directory contains my zsh configuration files with platform-specific suppor
 - [bat](https://github.com/sharkdp/bat) - Replacement for cat
 - [eza](https://eza.rocks/) - Replacement for ls
 - [fzf](https://github.com/junegunn/fzf) - Fuzzy find
+- [fzf-tab](https://github.com/Aloxaf/fzf-tab?tab=readme-ov-file#oh-my-zsh) - Tab fuzzy find results
 - [starship](https://starship.rs/guide/) - Shell prompt
 - [zoxide](https://github.com/ajeetdsouza/zoxide) - Faster cd
 - [bitwarden-ssh-agent](https://bitwarden.com/help/ssh-agent/) - SSH key management
