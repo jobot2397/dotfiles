@@ -5,7 +5,7 @@ My personal configuration files for multiple machines.
 ## Supported Configurations
 
 - **[Zsh](zsh/README.md)** - Shell configuration with platform-specific settings
-- **[Git](git/README.md)** - Version control configuration  
+- **[Git](git/README.md)** - Version control configuration
 - **[Vim](vim/README.md)** - Text editor configuration
 - **[SSH](ssh/README.md)** - Secure shell client configuration
 
@@ -29,3 +29,4 @@ My personal configuration files for multiple machines.
 - VSCode
 - Docker
 - Bun
+- Ghostty
