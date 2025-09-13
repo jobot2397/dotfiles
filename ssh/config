@@ -7,3 +7,54 @@
 #     User username
 #     Port 22
 #     IdentityFile ~/.ssh/id_rsa
+
+Host network-utils
+  HostName network-utils.homelab
+  User network-utils
+  SetEnv TERM=xterm-256color
+
+# Pi Cluster
+Host pi-1
+  HostName pi-1.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-2
+  HostName pi-2.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-3
+  HostName pi-3.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-4
+  HostName pi-4.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-5
+  HostName pi-5.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-6
+  HostName pi-6.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-7
+  HostName pi-7.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-8
+  HostName pi-8.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-9
+  HostName pi-9.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-10
+  HostName pi-10.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host pi-11
+  HostName pi-11.homelab
+  User root
+  SetEnv TERM=xterm-256color
