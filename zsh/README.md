@@ -36,12 +36,14 @@ This directory contains my zsh configuration files with platform-specific suppor
 Create a symlink from your home directory to this zsh configuration:
 
 Backup your existing .zshrc if it exists:
-```bash
+
+```zsh
 mv ~/.zshrc ~/.zshrc.backup
 ```
 
 Create symlink to the dotfiles .zshrc:
-```bash
+
+```zsh
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ```
 
@@ -51,16 +53,18 @@ The configuration automatically detects your platform (macOS/Linux) and loads th
 
 After creating the symlink, reload your shell configuration:
 
-```bash
+```zsh
 source ~/.zshrc
 ```
 
-Verify the configurations are loaded:
+Verify the configurations are loaded by checking PATH:
 
-```bash
+```zsh
 echo $PATH
 ```
 
-```bash
+Check loaded aliases:
+
+```zsh
 alias
 ```

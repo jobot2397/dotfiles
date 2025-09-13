@@ -6,48 +6,58 @@
 Create a symlink to use the dotfiles SSH configuration:
 
 Create .ssh directory if it doesn't exist:
-```bash
+
+```zsh
 mkdir -p ~/.ssh
 ```
 
 Backup existing SSH config if it exists:
-```bash
+
+```zsh
 mv ~/.ssh/config ~/.ssh/config.backup 2>/dev/null || true
 ```
 
 Create symlink:
-```bash
+
+```zsh
 ln -sf ~/dotfiles/ssh/config ~/.ssh/config
 ```
 
 Link allowed_signers for Git commit verification:
-```bash
+
+```zsh
 ln -sf ~/dotfiles/ssh/allowed_signers ~/.ssh/allowed_signers
 ```
 
-Set proper permissions:
-```bash
+Set proper permissions on .ssh directory:
+
+```zsh
 chmod 700 ~/.ssh
 ```
 
-```bash
+Set proper permissions on config file:
+
+```zsh
 chmod 600 ~/.ssh/config
 ```
 
 ## Verify Setup
 
 Check if the symlink was created correctly:
-```bash
+
+```zsh
 ls -la ~/.ssh/config
 ```
 
 Verify the symlink points to your dotfiles:
-```bash
+
+```zsh
 readlink ~/.ssh/config
 ```
 
 Test SSH configuration syntax (optional):
-```bash
+
+```zsh
 ssh -T git@github.com 2>/dev/null || echo "SSH config loaded successfully"
 ```
 

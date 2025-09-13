@@ -6,29 +6,34 @@
 Create a symlink to use the dotfiles git configuration:
 
 Backup existing .gitconfig if it exists:
-```bash
+
+```zsh
 mv ~/.gitconfig ~/.gitconfig.backup 2>/dev/null || true
 ```
 
 Create symlink:
-```bash
+
+```zsh
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ```
 
 ## Verify Setup
 
 Check if the symlink was created correctly:
-```bash
+
+```zsh
 ls -la ~/.gitconfig
 ```
 
 Test git configuration:
-```bash
+
+```zsh
 git config --list
 ```
 
 Verify the symlink points to your dotfiles:
-```bash
+
+```zsh
 readlink ~/.gitconfig
 ```
 
