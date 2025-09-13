@@ -1,21 +1,13 @@
 # Common aliases for all platforms
 
 # Navigation
+alias ~='cd $HOME'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-# ls variants
-alias ll='ls -la'
-
-# Git shortcuts
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gl='git pull'
-alias gd='git diff'
+# ls variant (Requires EZA)
+alias ll='eza -al'
 
 # Shortcuts
 alias h='history'
@@ -24,3 +16,6 @@ alias c='clear'
 # Zsh
 alias reload="source ~/.zshrc"
 alias zedit="zed ~/dotfiles/zsh/.zshrc"
+
+# Cat (Requires bat)
+alias bat="batcat"

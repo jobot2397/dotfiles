@@ -6,4 +6,5 @@ export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 # Snap packages (if using Ubuntu/similar)
 export PATH="/snap/bin:$PATH"
 
-# Add any other Linux-specific exports here
+# Bitwarden ssh agent
+export SSH_AUTH_SOCK=/home/jobot2397/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock

@@ -2,6 +2,15 @@
 
 This directory contains my zsh configuration files with platform-specific support.
 
+## Tools
+
+- [bat](https://github.com/sharkdp/bat) - Replacement for cat
+- [eza](https://eza.rocks/) - Replacement for ls
+- [starship](https://starship.rs/guide/) - Shell prompt
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - Faster cd
+- [bitwarden-ssh-agent](https://bitwarden.com/help/ssh-agent/) - SSH key management
+- [lazy-ssh]
+
 ## Structure
 
 - `.zshrc` - Main configuration file that sources other files
