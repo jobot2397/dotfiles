@@ -1,18 +1,15 @@
-# Get the directory where this .zshrc file is located
-DOTFILES_ZSH_DIR="${0:A:h}"
-
 # Source common configuration files
-source "$DOTFILES_ZSH_DIR/common.zsh"
-source "$DOTFILES_ZSH_DIR/exports.zsh"
-source "$DOTFILES_ZSH_DIR/aliases.zsh"
+source "$HOME/dotfiles/zsh/common.zsh"
+source "$HOME/dotfiles/zsh/exports.zsh"
+source "$HOME/dotfiles/zsh/aliases.zsh"
 
 # Source platform-specific configuration
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # macOS
-    source "$DOTFILES_ZSH_DIR/mac/macos.zsh"
-    source "$DOTFILES_ZSH_DIR/mac/exports.zsh"
+    source "$HOME/dotfiles/zsh/mac/macos.zsh"
+    source "$HOME/dotfiles/zsh/mac/exports.zsh"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    # Linux  
-    source "$DOTFILES_ZSH_DIR/linux/linux.zsh"
-    source "$DOTFILES_ZSH_DIR/linux/exports.zsh"
+    # Linux
+    source "$HOME/dotfiles/zsh/linux/linux.zsh"
+    source "$HOME/dotfiles/zsh/linux/exports.zsh"
 fi

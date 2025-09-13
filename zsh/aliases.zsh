@@ -18,4 +18,4 @@ alias reload="source ~/.zshrc"
 alias zedit="zed ~/dotfiles/zsh/.zshrc"
 
 # Cat (Requires bat)
-alias bat="batcat"
+alias cat="bat"
