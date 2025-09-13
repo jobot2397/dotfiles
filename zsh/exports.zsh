@@ -15,3 +15,6 @@ export HISTFILE="$HOME/.zsh_history"
 # Language
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
+# ASDF
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"

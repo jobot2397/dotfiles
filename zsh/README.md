@@ -12,6 +12,10 @@ This directory contains my zsh configuration files with platform-specific suppor
 - [bitwarden-ssh-agent](https://bitwarden.com/help/ssh-agent/) - SSH key management
 - [oh-my-zsh](https://ohmyz.sh/) - ZSH terminal configuration management
 - [lazy-ssh](https://github.com/adembc/lazyssh) - Easier ssh
+- [asdf](https://asdf-vm.com/) - Version manager
+
+## To Setup
+
 
 ## Structure
 

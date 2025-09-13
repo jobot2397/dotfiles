@@ -37,6 +37,7 @@ zstyle ':fzf-tab:complete:nvim:*' fzf-preview \
 # Oh My ZSH https://github.com/ohmyzsh/ohmyzsh/wiki
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(
+    asdf
     docker
     eza
     fzf
