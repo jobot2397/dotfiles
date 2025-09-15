@@ -1,7 +1,7 @@
 # Common environment variables for all platforms
 
 # Editor
-export EDITOR="vim"
+export EDITOR="nano"
 export VISUAL="$EDITOR"
 
 # Pager
