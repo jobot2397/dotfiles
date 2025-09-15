@@ -1,15 +1,105 @@
-# Starship configuration
-# Get editor completions based on the config schema
+# Homelab-focused Starship configuration
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
+format = """
+[╭─](bold blue)$hostname$username$directory$git_branch$git_status$docker_context$kubernetes$terraform$memory_usage$cmd_duration$jobs$status
+[╰─](bold blue)$character"""
+
 add_newline = true
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character]
-success_symbol = '[➜](bold green)'
-error_symbol = '[➜](bold red)'
+[hostname]
+ssh_only = false
+format = '[$hostname](bold yellow) '
+trim_at = '.'
 
-# Disable the package module, hiding it from the prompt completely
+[username]
+style_user = 'bold dimmed blue'
+style_root = 'bold red'
+format = '[$user]($style) '
+disabled = false
+show_always = false
+
+[directory]
+style = 'bold cyan'
+format = '[$path]($style)[$read_only]($read_only_style) '
+truncation_length = 3
+truncate_to_repo = true
+read_only = '🔒'
+
+[git_branch]
+format = 'on [$symbol$branch]($style) '
+symbol = '🌿 '
+style = 'bold purple'
+
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
+style = 'bold red'
+conflicted = '⚡'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+untracked = '?${count}'
+stashed = '📦'
+modified = '!${count}'
+staged = '+${count}'
+renamed = '»${count}'
+deleted = '✘${count}'
+
+[docker_context]
+format = 'via [🐳 $context](blue bold) '
+disabled = false
+
+[kubernetes]
+format = 'on [⎈ $context\($namespace\)](dimmed green) '
+disabled = false
+
+[terraform]
+format = 'via [💠 $version$workspace]($style) '
+style = 'bold 105'
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = 75
+format = 'via [🐏 $ram( | $swap)]($style) '
+style = 'bold dimmed green'
+
+[cmd_duration]
+min_time = 2_000
+format = 'took [$duration](bold yellow) '
+show_milliseconds = false
+
+[jobs]
+symbol = '⚙️ '
+style = 'bold blue'
+number_threshold = 1
+format = '[$symbol$number]($style) '
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+vicmd_symbol = '[❮](bold yellow)'
+
+[status]
+style = 'bold red'
+symbol = '🔴 '
+success_symbol = '🟢'
+format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
+map_symbol = true
+disabled = false
+
+[python]
+symbol = '🐍 '
+format = 'via [$symbol$pyenv_prefix($version)(\($virtualenv\))]($style) '
+
+[nodejs]
+format = 'via [🤖 $version](bold green) '
+
+[rust]
+format = 'via [🦀 $version](red bold) '
+
+[golang]
+format = 'via [🐹 $version](bold cyan) '
+
 [package]
 disabled = true
