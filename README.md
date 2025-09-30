@@ -23,10 +23,8 @@ My personal configuration files for multiple machines.
 
 ## Future Configurations
 
-- Zed
 - Neovim
 - Yarn
 - VSCode
 - Docker
 - Bun
-- Ghostty

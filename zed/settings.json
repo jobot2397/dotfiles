@@ -14,15 +14,14 @@
     "light": "One Light",
     "dark": "Github Dark"
   },
+  "lsp_document_colors": "background",
   "ssh_connections": [
     {
       "host": "network-utils.homelab",
       "username": "network-utils",
       "projects": [
         {
-          "paths": [
-            "/home/network-utils/containers"
-          ]
+          "paths": ["/home/network-utils/containers"]
         }
       ]
     }
