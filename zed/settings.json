@@ -14,17 +14,8 @@
     "light": "One Light",
     "dark": "Github Dark"
   },
-  "ssh_connections": [
-    {
-      "host": "network-utils.homelab",
-      "username": "network-utils",
-      "projects": [
-        {
-          "paths": [
-            "/home/network-utils/containers"
-          ]
-        }
-      ]
-    }
-  ]
+  "file_types": {
+    "Markdown": ["*.md", "*.markdown", "*.mdown", "*.mkd", "*.mkdn", "*.mdoc"]
+  },
+  "ssh_connections": []
 }

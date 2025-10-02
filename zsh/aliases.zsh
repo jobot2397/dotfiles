@@ -15,4 +15,7 @@ alias c='clear'
 
 # Zsh
 alias reload="source ~/.zshrc"
-alias zedit="zed ~/dotfiles/zsh/.zshrc"
+alias zshrc="zed ~/dotfiles/zsh/.zshrc"
+
+# SSH config
+alias sshconfig="zed ~/dotfiles/ssh/config"

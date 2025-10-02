@@ -8,9 +8,33 @@
 #     Port 22
 #     IdentityFile ~/.ssh/id_rsa
 
-Host network-utils
-  HostName network-utils.homelab
-  User network-utils
+
+# VM/LXC
+Host playground
+  HostName playground.homelab
+  User jobot2397
+  SetEnv TERM=xterm-256color
+
+# Proxmox Physical Machines
+Host edison
+  HostName edison.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host darwin
+  HostName darwin.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host galilei
+  HostName galilei.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host newton
+  HostName newton.homelab
+  User root
+  SetEnv TERM=xterm-256color
+Host curie
+  HostName curie.homelab
+  User root
   SetEnv TERM=xterm-256color
 
 # Pi Cluster
