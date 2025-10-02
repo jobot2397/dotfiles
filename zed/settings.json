@@ -17,5 +17,6 @@
   "file_types": {
     "Markdown": ["*.md", "*.markdown", "*.mdown", "*.mkd", "*.mkdn", "*.mdoc"]
   },
-  "ssh_connections": []
+  "ssh_connections": [],
+  "lsp_document_colors": "background"
 }
