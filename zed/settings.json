@@ -17,6 +17,16 @@
   "file_types": {
     "Markdown": ["*.md", "*.markdown", "*.mdown", "*.mkd", "*.mkdn", "*.mdoc"]
   },
-  "ssh_connections": [],
+  "ssh_connections": [
+    {
+      "host": "hostinger",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jobot2397/containers"]
+        }
+      ]
+    }
+  ],
   "lsp_document_colors": "background"
 }

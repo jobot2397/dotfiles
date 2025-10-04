@@ -8,6 +8,19 @@
 #     Port 22
 #     IdentityFile ~/.ssh/id_rsa
 
+# Hostinger VPS - Ubuntu
+# Host hostinger-root
+#   HostName 45.132.241.2
+#   User root
+#   SetEnv TERM=xterm-256color
+Host ubuntu-hostinger
+  HostName 45.132.241.2
+  User jobot2397
+  SetEnv TERM=xterm-256color
+Host fedora-hostinger
+  HostName 195.35.37.248
+  User jobot2397
+  SetEnv TERM=xterm-256color
 
 # VM/LXC
 Host playground
