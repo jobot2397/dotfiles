@@ -16,7 +16,9 @@ This directory contains my zsh configuration files with platform-specific suppor
 - [asdf](https://asdf-vm.com/) - Version manager
 
 ## To Setup
-
+- lazydocker
+- lazygit
+- btop
 
 ## Structure
 

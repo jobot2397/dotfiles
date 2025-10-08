@@ -41,7 +41,10 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
-theme= GitHub-Dark-Default
+
+# Linux theme file is different
+#theme= GitHub-Dark-Default
+theme= GitHub Dark Default
 shell-integration=zsh
 shell-integration-features=sudo
 keybind = shift+enter=text:\x1b\r

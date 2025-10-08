@@ -19,7 +19,7 @@
   },
   "ssh_connections": [
     {
-      "host": "hostinger",
+      "host": "ubuntu-hostinger",
       "args": [],
       "projects": [
         {
