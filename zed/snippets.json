@@ -1,0 +1,34 @@
+{
+  "mdoc-frontmatter": {
+    "prefix": "frontmatter",
+    "body": [
+      "---",
+      "name: $1",
+      "title: $2",
+      "description: $3",
+      "slug: $4",
+      "updatedDate: ${5:2025-10-05}",
+      "author: ${6:Joseph Lawler}",
+      "---",
+      "$0"
+    ],
+    "description": "Insert mdoc frontmatter template",
+    "scope": "markdown"
+  },
+  "mdoc-fm": {
+    "prefix": "fm",
+    "body": [
+      "---",
+      "name: $1",
+      "title: $2",
+      "description: $3",
+      "slug: $4",
+      "updatedDate: ${5:2025-10-05}",
+      "author: ${6:Joseph Lawler}",
+      "---",
+      "$0"
+    ],
+    "description": "Insert mdoc frontmatter (short)",
+    "scope": "markdown"
+  }
+}
