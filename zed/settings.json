@@ -19,7 +19,7 @@
   },
   "ssh_connections": [
     {
-      "host": "ubuntu-hostinger",
+      "host": "hopper",
       "args": [],
       "projects": [
         {

@@ -13,7 +13,7 @@
 #   HostName 45.132.241.2
 #   User root
 #   SetEnv TERM=xterm-256color
-Host ubuntu-hostinger
+Host hopper
   HostName 45.132.241.2
   User jobot2397
   SetEnv TERM=xterm-256color
