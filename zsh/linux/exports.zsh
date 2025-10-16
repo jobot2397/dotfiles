@@ -8,3 +8,6 @@ export PATH="/snap/bin:$PATH"
 
 # Bitwarden ssh agent
 export SSH_AUTH_SOCK=/home/jobot2397/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock
+
+# RUST
+. "$HOME/.cargo/env"
