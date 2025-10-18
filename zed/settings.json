@@ -35,6 +35,15 @@
           "paths": ["/home/jobot2397/containers"]
         }
       ]
+    },
+    {
+      "host": "playground",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jobot2397/containers"]
+        }
+      ]
     }
   ],
   "lsp": {

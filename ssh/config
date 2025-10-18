@@ -22,6 +22,18 @@ Host fedora-hostinger
   User jobot2397
   SetEnv TERM=xterm-256color
 
+# PiKVM
+Host tesla
+  HostName tesla.homelab
+  User root
+  SetEnv TERM=xterm-256color
+
+# Truenas
+Host fermi
+  HostName truenas.homelab
+  User truenas_admin
+  SetEnv TERM=xterm-256color
+
 # VM/LXC
 Host playground
   HostName playground.homelab

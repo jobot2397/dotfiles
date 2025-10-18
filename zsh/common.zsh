@@ -48,6 +48,7 @@ plugins=(
     kubectl
     nvm
     npm
+    tailscale
     ssh
     starship
     yarn
