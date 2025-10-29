@@ -34,9 +34,19 @@ Host fermi
   User truenas_admin
   SetEnv TERM=xterm-256color
 
+# Heisenberg
+Host heisenberg
+  HostName heisenberg.homelab
+  User jobot2397
+  SetEnv TERM=xterm-256color
+
 # VM/LXC
 Host playground
   HostName playground.homelab
+  User jobot2397
+  SetEnv TERM=xterm-256color
+Host network-utils
+  HostName network-utils.homelab
   User jobot2397
   SetEnv TERM=xterm-256color
 
