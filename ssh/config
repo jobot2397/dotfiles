@@ -22,6 +22,20 @@ Host fedora-hostinger
   User jobot2397
   SetEnv TERM=xterm-256color
 
+# Technitium Cluster
+Host technitium-1
+  HostName 192.168.100.3
+  User root
+  SetEnv TERM=xterm-256color
+Host technitium-2
+  HostName 192.168.100.4
+  User root
+  SetEnv TERM=xterm-256color
+Host technitium-3
+  HostName 192.168.100.5
+  User root
+  SetEnv TERM=xterm-256color
+
 # PiKVM
 Host tesla
   HostName tesla.homelab
