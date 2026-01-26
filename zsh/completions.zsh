@@ -1,7 +1,12 @@
 # Common zsh configuration for all platforms
 
-# Add zsh-completions to fpath
-fpath=($HOME/dotfiles/zsh/plugins/zsh-completions/src $fpath)
+# Add completions directories to fpath
+fpath=($HOME/dotfiles/zsh/completions $HOME/dotfiles/zsh/plugins/zsh-completions/src $fpath)
+
+# mise integration (must be before compinit so mise-installed tools are available)
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
 
 # Initialize completion system
 autoload -Uz compinit
@@ -11,15 +16,10 @@ compinit
 autoload -U +X bashcompinit
 bashcompinit
 
-# Source all .zsh files in the completions directory
+# Source all .zsh completion files in the completions directory
 for file in "$HOME/dotfiles/zsh/completions"/*.zsh; do
   [ -f "$file" ] && source "$file"
 done
-
-# mise integration
-if command -v mise >/dev/null 2>&1; then
-  eval "$(mise activate zsh)"
-fi
 
 # fzf shell integration (Ctrl+R history, Ctrl+T files, Alt+C dirs)
 if command -v fzf >/dev/null 2>&1; then
