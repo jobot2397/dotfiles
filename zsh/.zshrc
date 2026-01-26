@@ -3,6 +3,7 @@ source "$HOME/dotfiles/zsh/completions.zsh"
 source "$HOME/dotfiles/zsh/exports.zsh"
 source "$HOME/dotfiles/zsh/aliases.zsh"
 source "$HOME/dotfiles/zsh/previews.zsh"
+source "$HOME/dotfiles/zsh/zoxide.zsh"
 
 # Source platform-specific configuration
 if [[ "$OSTYPE" == "darwin"* ]]; then
