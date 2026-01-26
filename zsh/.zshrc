@@ -21,3 +21,6 @@ fi
 # Starship
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(starship init zsh)"
+
+# Add to ~/.zshrc
+eval "$(fnox activate zsh)"
