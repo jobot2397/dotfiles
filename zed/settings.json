@@ -15,16 +15,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "agent_servers": {
+    "claude": {
+      "favorite_models": ["sonnet"],
+      "default_config_options": {},
+      "favorite_config_option_values": {},
+    },
+  },
+  "debugger": {
+    "dock": "left",
+  },
   "ui_font_size": 18,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_weight": 300,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Github Dark"
+    "light": "Gruvbox Light",
+    "dark": "Github Dark",
   },
   "file_types": {
     "Markdown": ["*.md", "*.markdown", "*.mdown", "*.mkd", "*.mkdn", "*.mdoc"],
-    "Caddyfile": ["Caddyfile*", "*.caddyfile"]
+    "Caddyfile": ["Caddyfile*", "*.caddyfile"],
   },
   "ssh_connections": [
     {
@@ -32,19 +45,109 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/jobot2397/containers"]
-        }
-      ]
+          "paths": ["/home"],
+        },
+        {
+          "paths": ["/home/jobot2397"],
+        },
+        {
+          "paths": ["/home/jobot2397/containers"],
+        },
+        {
+          "paths": ["/root/containers"],
+        },
+        {
+          "paths": ["~/containers"],
+        },
+      ],
     },
     {
       "host": "playground",
       "args": [],
       "projects": [
         {
-          "paths": ["/home/jobot2397/containers"]
-        }
-      ]
-    }
+          "paths": ["/home/jobot2397/containers"],
+        },
+        {
+          "paths": ["/home/jobot2397/homelab"],
+        },
+      ],
+    },
+    {
+      "host": "heisenberg",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jobot2397/containers"],
+        },
+      ],
+    },
+    {
+      "host": "immich",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jobot2397/containers"],
+        },
+      ],
+    },
+    {
+      "host": "network-utils",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/jobot2397/containers"],
+        },
+      ],
+    },
+    {
+      "host": "windows-poc",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "minecraft",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "minecraft",
+      "username": "jobot2397",
+      "args": [],
+      "projects": [],
+    },
+    {
+      "host": "technitium-1",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["~/containers"],
+        },
+      ],
+    },
+    {
+      "host": "technitium-2",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["~/containers/./"],
+        },
+      ],
+    },
+    {
+      "host": "technitium-3",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["~/containers"],
+        },
+      ],
+    },
+    {
+      "host": "edison",
+      "args": [],
+      "projects": [],
+    },
   ],
   "lsp": {
     "caddyfile": {
@@ -52,13 +155,13 @@
       "settings": {},
       "binary": {
         "path": "",
-        "arguments": []
-      }
-    }
+        "arguments": [],
+      },
+    },
   },
   "languages": {
     "Caddyfile": {
-      "language_servers": []
-    }
-  }
+      "language_servers": [],
+    },
+  },
 }

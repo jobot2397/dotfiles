@@ -48,8 +48,9 @@ theme= GitHub Dark Default
 shell-integration=zsh
 shell-integration-features=sudo
 keybind = shift+enter=text:\x1b\r
-font-family = JetBrains Mono Regular
-font-family-bold = JetBrains Mono Bold
-font-family-italic = JetBrains Mono Italic
-font-family-bold-italic = JetBrains Mono Bold Italic
-font-size = 16
+font-family = JetBrainsMono Nerd Font
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Italic
+font-style-bold-italic = Bold Italic
+font-size = 18

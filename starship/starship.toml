@@ -2,104 +2,193 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[╭─](bold blue)$hostname$username$directory$git_branch$git_status$docker_context$kubernetes$terraform$memory_usage$cmd_duration$jobs$status
-[╰─](bold blue)$character"""
+[](color_red)\
+$os\
+$username\
+[](bg:color_orange fg:color_red)\
+$hostname\
+[](bg:color_yellow fg:color_orange)\
+$localip\
+[](bg:color_green fg:color_yellow)\
+$git_branch\
+$git_status\
+[](bg:color_blue fg:color_green)\
+${custom.docker}\
+[](bg:color_purple fg:color_blue)\
+$kubernetes\
+[](bg:color_red fg:color_purple)\
+$rust\
+[](bg:color_aqua fg:color_red)\
+$golang\
+[](bg:color_red fg:color_aqua)\
+$java\
+[](bg:color_yellow fg:color_red)\
+$python\
+[](bg:color_green fg:color_yellow)\
+$nodejs\
+[](bg:color_pink fg:color_green)\
+$bun\
+[](bg:color_white fg:color_pink)\
+$deno\
+[](bg:color_aqua fg:color_white)\
+${custom.proxy}\
+[](bg:color_grey fg:color_aqua)\
+${custom.tailscale}\
+[](bg:color_green fg:color_grey)\
+$battery\
+[](bg:color_grey fg:color_green)\
+$time\
+[ ](fg:color_bg1)\
+$line_break\
+[](color_green)\
+$directory\
+[](fg:color_green) \
+"""
 
-add_newline = true
+palette = 'github_dark'
+
+[palettes.github_dark]
+color_fg0 = '#0d1117'
+color_fg1 = '#f0f6fc'
+color_bg1 = '#3d444d'
+color_bg3 = '#1c2128'
+color_blue = '#58a6ff'
+color_aqua = '#39c5cf'
+color_green = '#3fb950'
+color_orange = '#ffa657'
+color_purple = '#be8fff'
+color_red = '#ff7b72'
+color_yellow = '#d29922'
+color_lang = '#6e7681'
+color_grey = '#3d444d'
+color_white = '#f0f6fc'
+color_pink = '#f778ba'
+
+[os]
+disabled = false
+style = "bg:color_red fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Raspbian = "󰐿"
+Macos = "󰀵"
+Linux = "󰌽"
+
+[username]
+show_always = true
+style_user = "bg:color_red fg:color_fg0"
+style_root = "bg:color_red fg:color_fg0"
+format = '[ $user ]($style)'
 
 [hostname]
 ssh_only = false
-format = '[$hostname](bold yellow) '
-trim_at = '.'
-
-[username]
-style_user = 'bold dimmed blue'
-style_root = 'bold red'
-format = '[$user]($style) '
+format = '[ $ssh_symbol $hostname ]($style)'
+style = "fg:color_fg0 bg:color_orange"
+trim_at = ''
 disabled = false
-show_always = false
 
-[directory]
-style = 'bold cyan'
-format = '[$path]($style)[$read_only]($read_only_style) '
-truncation_length = 3
-truncate_to_repo = true
-read_only = '🔒'
+[localip]
+ssh_only = false
+format = '[ $localipv4 ]($style)'
+style = "fg:color_fg0 bg:color_yellow"
+disabled = false
 
 [git_branch]
-format = 'on [$symbol$branch]($style) '
-symbol = '🌿 '
-style = 'bold purple'
+symbol = ""
+style = "fg:color_fg0 bg:color_green"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-format = '([$all_status$ahead_behind]($style))'
-style = 'bold red'
-conflicted = '⚡'
-ahead = '⇡${count}'
-behind = '⇣${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-untracked = '?${count}'
-stashed = '📦'
-modified = '!${count}'
-staged = '+${count}'
-renamed = '»${count}'
-deleted = '✘${count}'
+style = "fg:color_fg0 bg:color_green"
+format = '[($all_status$ahead_behind )]($style)'
 
-[docker_context]
-format = 'via [🐳 $context](blue bold) '
-disabled = false
+[custom.docker]
+symbol = ""
+command = 'docker context show 2>/dev/null || echo "default"'
+when = "command -v docker >/dev/null 2>&1"
+style = "fg:color_fg0 bg:color_blue"
+format = '[ $symbol $output ]($style)'
 
 [kubernetes]
-format = 'on [⎈ $context\($namespace\)](dimmed green) '
+symbol = " "
+format = '[ $symbol $context ]($style)'
+style = "fg:color_fg0 bg:color_purple"
 disabled = false
-
-[terraform]
-format = 'via [💠 $version$workspace]($style) '
-style = 'bold 105'
-disabled = false
-
-[memory_usage]
-disabled = false
-threshold = 75
-format = 'via [🐏 $ram( | $swap)]($style) '
-style = 'bold dimmed green'
-
-[cmd_duration]
-min_time = 2_000
-format = 'took [$duration](bold yellow) '
-show_milliseconds = false
-
-[jobs]
-symbol = '⚙️ '
-style = 'bold blue'
-number_threshold = 1
-format = '[$symbol$number]($style) '
-
-[character]
-success_symbol = '[❯](bold green)'
-error_symbol = '[❯](bold red)'
-vicmd_symbol = '[❮](bold yellow)'
-
-[status]
-style = 'bold red'
-symbol = '🔴 '
-success_symbol = '🟢'
-format = '[$symbol$common_meaning$signal_name$maybe_int]($style) '
-map_symbol = true
-disabled = false
-
-[python]
-symbol = '🐍 '
-format = 'via [$symbol$pyenv_prefix($version)(\($virtualenv\))]($style) '
 
 [nodejs]
-format = 'via [🤖 $version](bold green) '
+symbol = " "
+style = "fg:color_fg0 bg:color_green"
+format = '[ $symbol $version ]($style)'
+
+[bun]
+symbol = " "
+style = "fg:color_fg0 bg:color_pink"
+format = '[ $symbol $version ]($style)'
+
+[deno]
+symbol = " "
+style = "fg:color_fg1 bg:color_white"
+format = '[ $symbol $version ]($style)'
 
 [rust]
-format = 'via [🦀 $version](red bold) '
+symbol = " "
+style = "fg:color_fg0 bg:color_red"
+format = '[ $symbol $version ]($style)'
 
 [golang]
-format = 'via [🐹 $version](bold cyan) '
+symbol = ""
+style = "fg:color_fg0 bg:color_aqua"
+format = '[ $symbol $version ]($style)'
 
-[package]
-disabled = true
+[java]
+symbol = " "
+style = "fg:color_fg0 bg:color_red"
+format = '[ $symbol $version ]($style)'
+
+[python]
+symbol = " "
+style = "fg:color_fg0 bg:color_yellow"
+format = '[ $symbol $version ]($style)'
+
+[custom.proxy]
+when = 'pgrep -x "Proxyman" >/dev/null 2>&1'
+style = "fg:color_fg0 bg:color_aqua"
+format = '[  ]($style)'
+
+[custom.tailscale]
+command = 'if tailscale status --self >/dev/null 2>&1; then echo "󰛳"; else echo "󰅛"; fi'
+when = true
+style = "fg:color_fg1 bg:color_grey"
+format = '[ $output ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:color_fg1 bg:color_bg1"
+format = '[  $time ]($style)'
+
+[battery]
+full_symbol = '🔋'
+charging_symbol = '⚡️'
+discharging_symbol = '💀'
+disabled = false
+format = '[ $symbol $percentage ]($style)'
+
+[[battery.display]]
+threshold = 100
+style = "fg:color_fg0 bg:color_green"
+
+[directory]
+style = "bg:color_green fg:color_fg0"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"~" = " "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Projects" = " " # Note mac and linux dirs are differnt
+
+[line_break]
+disabled = false

@@ -7,7 +7,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # ls variant (Requires EZA)
-alias ll='eza -al'
+alias ls='eza --icons -al'
+alias ll='ls'
 
 # Shortcuts
 alias h='history'
