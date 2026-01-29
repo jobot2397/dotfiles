@@ -28,3 +28,6 @@ My personal configuration files for multiple machines.
 - VSCode
 - Docker
 - Bun
+
+TODO
+- FNOX

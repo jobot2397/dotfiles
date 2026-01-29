@@ -32,8 +32,8 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light",
-    "dark": "Github Dark",
+    "light": "Github Dark",
+    "dark": "GitHub Dark",
   },
   "file_types": {
     "Markdown": ["*.md", "*.markdown", "*.mdown", "*.mkd", "*.mkdn", "*.mdoc"],

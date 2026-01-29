@@ -24,3 +24,15 @@ eval "$(starship init zsh)"
 
 # Add to ~/.zshrc
 eval "$(fnox activate zsh)"
+# zerobrew
+export ZEROBREW_DIR=/Users/jobot23/.zerobrew
+export ZEROBREW_BIN=/Users/jobot23/.local/bin
+export PKG_CONFIG_PATH="/opt/zerobrew/prefix/lib/pkgconfig:${PKG_CONFIG_PATH:-}"
+_zb_path_append() {
+    local argpath="$1"
+    case ":${PATH}:" in
+        *:"$argpath":*) ;;
+        *) export PATH="$argpath:$PATH" ;;
+    esac;
+}
+_zb_path_append /opt/zerobrew/prefix/bin
