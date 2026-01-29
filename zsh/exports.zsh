@@ -15,6 +15,3 @@ export HISTFILE="$HOME/.zsh_history"
 # Language
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-
-# Bitwarden CLI
-export BW_SESSION=$(bw unlock --raw)
