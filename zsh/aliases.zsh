@@ -20,3 +20,6 @@ alias zshrc="zed ~/dotfiles/zsh/.zshrc"
 
 # SSH config
 alias sshconfig="zed ~/dotfiles/ssh/config"
+
+# BW Unlock
+alias bwunlock='export BW_SESSION=$(bw unlock --raw) && echo "$BW_SESSION" > ~/.bw_session && chmod 600 ~/.bw_session && echo "Bitwarden unlocked and session saved"'
