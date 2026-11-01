@@ -1,0 +1,6 @@
+# Symlink mappings for this dotfiles repo (see https://github.com/jobot2397/linker).
+# Run `linker` / `linker status` from this repo (or any subdirectory).
+
+[[links]]
+source = "bitwarden-ssh-agent"
+destination = "~/.config/bitwarden-ssh-agent"
