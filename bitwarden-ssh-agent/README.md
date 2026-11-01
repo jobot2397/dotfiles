@@ -23,18 +23,34 @@ Private keys stay in Bitwarden; this module only sets `SSH_AUTH_SOCK`. **Never c
 
 Linux: Bitwarden Desktop may expose a similar agent socket when SSH agent support is enabled; paths and UI labels can differ—check Bitwarden’s docs for your platform.
 
+## Install (linker)
+
+From the repo root (where `linker.toml` lives), using [linker](https://github.com/jobot2397/linker):
+
+```bash
+linker status
+linker apply bitwarden-ssh-agent
+# or: linker
+```
+
+That creates:
+
+```text
+~/.config/bitwarden-ssh-agent → <repo>/bitwarden-ssh-agent
+```
+
 ## Usage (zsh)
 
-From your `.zshrc` (or another sourced file), after `DOTFILES` points at this repo:
+After linking (or while developing against the repo path), source the snippet from `.zshrc`:
+
+```zsh
+source ~/.config/bitwarden-ssh-agent/ssh-agent.zsh
+```
+
+Or directly from the repo (without linker):
 
 ```zsh
 source "$DOTFILES/bitwarden-ssh-agent/ssh-agent.zsh"
-```
-
-Or with an absolute path:
-
-```zsh
-source "$HOME/Documents/Projects/dotfiles/bitwarden-ssh-agent/ssh-agent.zsh"
 ```
 
 `ssh-agent.zsh` exports:
